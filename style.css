@@ -54,7 +54,7 @@ body {
 
 /* 본문 */
 .body-text {
-  margin-top: 20vh;
+  margin-top: l4vh;
   font-size: 15px;
   line-height: 1.7;
   white-space: pre-line;
@@ -103,4 +103,24 @@ body {
   overflow: hidden;
   z-index: 1; /* 텍스트보다 아래 */
   pointer-events: none;
+}
+
+.earphone-wrap.left .earphone-img {
+  position: absolute;
+  right: 0;
+}
+
+.earphone-wrap.right .earphone-img {
+  position: absolute;
+  left: 0;
+}
+
+.earphone-img {
+  height: 80vh;
+  transform: rotate(-6deg);
+}
+
+.content {
+  position: relative;
+  z-index: 5;
 }
