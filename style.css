@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+  background: #ffffff;
+  color: #000;
+  overflow-x: hidden;
+}
+
+/* 슬라이드 컨테이너 */
+.container {
+  display: flex;
+  width: 200vw;
+  transition: transform 0.45s ease;
+}
+
+/* 각 페이지 */
+.page {
+  width: 100vw;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* 콘텐츠 레이아웃 */
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 상단 */
+.header {
+  margin-top: 40px;
+}
+
+.date {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* 본문 */
+.body-text {
+  margin-top: auto;
+  margin-bottom: 30vh;
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* 유튜브 썸네일 */
+#youtube-thumb {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin: 40px auto 20px;
+  border-radius: 6px;
+}
+
+/* 노래 정보 */
+.song-info {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* 이어폰 이미지 */
+.earphone {
+  position: fixed;
+  top: 35%;
+  right: -40px;
+  height: 70vh;
+  z-index: 10;
+  pointer-events: none;
+  transform: rotate(-8deg);
+}
