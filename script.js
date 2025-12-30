@@ -32,3 +32,16 @@ function extractYouTubeID(url) {
   const match = url.match(reg);
   return match ? match[1] : '';
 }
+
+// iOS pinch zoom 완전 차단
+document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gesturechange', function (e) {
+  e.preventDefault();
+});
+
+document.addEventListener('gestureend', function (e) {
+  e.preventDefault();
+});
