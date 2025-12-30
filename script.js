@@ -33,19 +33,9 @@ fetch('./content.json')
 
 setDate();
 
-/* 스와이프 */
-document.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-}, { passive: true });
-
-document.addEventListener('touchend', (e) => {
-  const endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) {
-    const next = (current + 1) % pages.length;
-    pages[current].classList.remove('active');
-    pages[current].classList.add('prev');
-    pages[next].classList.remove('prev');
-    pages[next].classList.add('active');
-    current = next;
-  }
-}, { passive: true });
+/* 탭 */
+document.addEventListener('click', () => {
+  pages[current].classList.remove('active');
+  current = (current + 1) % pages.length;
+  pages[current].classList.add('active');
+});
