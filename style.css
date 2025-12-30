@@ -25,37 +25,37 @@ body {
   transform: translateX(0);
 }
 
-.page.fortune {
-  z-index: 1;
+.page.prev {
+  transform: translateX(-100%);
 }
 
-.page.music {
-  z-index: 0;
-}
-
-/* 이어폰 (세로 기준 5:5 분할) */
+/* 이어폰 */
 .earphone {
   position: absolute;
-  top: 22%;
-  right: 0;
-  width: 50vw;
+  width: 60vw;
   height: 80vh;
 
   background-image: url('./earphone.PNG');
   background-repeat: no-repeat;
-  background-size: 200% 100%;
-  background-position-y: center;
+  background-size: contain;
+  background-position: center;
 
   z-index: 1;
   pointer-events: none;
 }
 
-.earphone-left {
-  background-position-x: left;
+/* Fortune: 오른쪽 중단 */
+.fortune .earphone {
+  top: 18%;
+  right: -12vw;
+  background-position: left center;
 }
 
-.earphone-right {
-  background-position-x: right;
+/* Music: 왼쪽 하단 */
+.music .earphone {
+  bottom: -12vh;
+  left: -18vw;
+  background-position: right bottom;
 }
 
 /* 콘텐츠 */
@@ -65,27 +65,33 @@ body {
 }
 
 .date {
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   margin-bottom: 6px;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 800;
   margin: 0 0 20px 0;
 }
 
 .body-text {
-  margin-top: 13vh;
+  margin-top: 12vh;
   font-size: 16px;
   line-height: 1.6;
 }
 
+.music-text {
+  margin-top: 20px;
+}
+
+/* 유튜브 썸네일 */
 .thumb {
   width: 45%;
-  max-width: 160px;
+  max-width: 150px;
   margin-top: 10px;
+  display: block;
 }
 
 .song-info {
