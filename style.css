@@ -14,49 +14,49 @@ body {
 .page {
   position: fixed;
   inset: 0;
-  padding: 24px;
   background: #fff;
-  overflow: hidden;
-  transform: translateX(100%);
-  transition: transform 0.35s ease;
+  padding: 24px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .page.active {
-  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .page.prev {
   transform: translateX(-100%);
 }
 
-/* 이어폰 */
 .earphone {
-  position: absolute;
-  .earphone {
-  width: 80vw;    /* ⬅️ 다시 크게 */
-  height: 90vh;   /* ⬅️ 다시 크게 */
-}
-  background-image: url('./earphone.PNG');
+  position: fixed;              
+  top: 20%;
+  width: 80vw;
+  height: 80vh;
+
+  background-image: url('earphone.png'); /* ← index.html과 같은 폴더 */
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
-  z-index: 1;
+
+  z-index: 2;
   pointer-events: none;
 }
 
 /* Fortune */
-.fortune .earphone {
-  top: 18%;
-  right: -12vw;
+.earphone-left {
+  right: -20vw;
   background-position: left center;
 }
 
 /* Music */
-.music .earphone {
-  top: 20%;          /* Fortune이랑 동일한 Y */
-  left: -20vw;       /* 화면 왼쪽 끝에 닿게 */
-  background-position-x: right;
+.earphone-right {
+  left: -20vw;
+  background-position: right center;
 }
+
 
 /* 콘텐츠 */
 .content {
