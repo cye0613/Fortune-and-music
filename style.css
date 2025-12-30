@@ -51,9 +51,9 @@ body {
 
 /* Music */
 .music .earphone {
-  bottom: -12vh;
-  left: -18vw;
-  background-position: right bottom;
+  top: 20%;          /* Fortune이랑 동일한 Y */
+  left: -20vw;       /* 화면 왼쪽 끝에 닿게 */
+  background-position-x: right;
 }
 
 /* 콘텐츠 */
